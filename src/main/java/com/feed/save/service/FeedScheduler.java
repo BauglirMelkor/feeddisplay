@@ -27,7 +27,7 @@ public class FeedScheduler {
 		this.configProperties = configProperties;
 	}
 
-	@Scheduled(fixedDelay = 1000)
+	@Scheduled(fixedRateString ="${feed.interval}")
 	public void scheduleRssReader() {
 		try {
 
